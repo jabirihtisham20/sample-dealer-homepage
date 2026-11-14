@@ -1,19 +1,33 @@
-# Sample Dealer Homepage
+# Sample Dealer Homepage — Next.js + Tailwind CSS
 
-Demo used-car dealership homepage ("Apex Motors", Milton Keynes) built by **Velix Web Studio** as a sales sample for UK motor trade businesses.
+Demo used-car dealership homepage ("Apex Motors", Milton Keynes) built by **Velix Web Studio**, converted from the original static HTML version into a modern **Next.js (App Router) + Tailwind CSS v4** project.
 
-## What's inside
-- Hero stock search that scrolls to live results
-- Filterable stock grid (Cars / SUVs / Vans / Under £20k) with photos, prices and monthly finance figures
-- Finance calculator using real 9.9% APR maths
-- "Reserve this car for £99" flow with a 48-hour hold confirmation
-- Part-exchange valuation form and test-drive enquiry (hands off to WhatsApp)
-- Customer reviews, opening hours with live open/closed status
-- Sticky Call / WhatsApp bar on mobile
-
-The dealership, stock, prices and reviews are illustrative examples for demonstration.
+## Tech stack
+- **Next.js 15** (App Router, TypeScript)
+- **React 19**
+- **Tailwind CSS v4** (via `@tailwindcss/postcss`)
+- `next/font` (Barlow + Barlow Condensed), `next/image`
 
 ## Run it
-Open `index.html` in any browser — it is a single self-contained file (all images and styles inlined). It can also be deployed as-is to GitHub Pages, Vercel or Netlify.
+```bash
+npm install
+npm run dev    # http://localhost:3000
+npm run build  # production build
+npm start
+```
+
+## What's inside
+- `app/page.tsx` — page composition + shared filter/reserve state
+- `components/Header.tsx` — sticky header with live open/closed status (Europe/London)
+- `components/Hero.tsx` — hero stock search (make / budget / fuel) wired to the stock grid
+- `components/StockSection.tsx` — filterable stock grid (Cars / SUVs / Vans / Under £20k) with per-car finance examples
+- `components/FinanceCalculator.tsx` — slider calculator using real annuity maths at 9.9% APR (`lib/finance.ts`)
+- `components/ReserveModal.tsx` — £99 reserve flow with 48-hour hold confirmation and WhatsApp hand-off
+- `components/Sections.tsx` — trust strip, 4-step buying guide, part-exchange valuation form, reviews, opening hours, Velix call-to-action, footer
+- `components/StickyBar.tsx` — mobile sticky Call / WhatsApp bar
+- `data/cars.ts` — stock, reviews, dealer details and opening hours in one editable file
+- `public/images/` — demo vehicle photos
+
+The dealership, stock, prices and reviews are illustrative examples for demonstration.
 
 Built by Velix Web Studio — https://velixweb.vercel.app

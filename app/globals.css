@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-barlow), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-barlow-condensed), var(--font-barlow), sans-serif;
+
+  --color-navy-950: #0a1120;
+  --color-navy-900: #0e1830;
+  --color-navy-800: #16223f;
+  --color-navy-700: #1f2f52;
+  --color-brand-400: #f5b921;
+  --color-brand-500: #eda70a;
+  --color-brand-600: #cf8f04;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f6f7f9;
+  color: #131a26;
+}
+
+/* Range slider styling for the finance calculator */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 9999px;
+  background: #dbe1ea;
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 9999px;
+  background: #eda70a;
+  border: 3px solid #0e1830;
+  cursor: pointer;
+}
+input[type="range"]::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 9999px;
+  background: #eda70a;
+  border: 3px solid #0e1830;
+  cursor: pointer;
+}
